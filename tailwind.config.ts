@@ -7,5 +7,5 @@ export default {
 		extend: {}
 	},
 
-	plugins: []
+	plugins: [require('daisyui')]
 } satisfies Config;

@@ -1,38 +1,20 @@
-# sv
+# Universal Notebook
+Universal notebook is a basic project that allows many people to edit the same thing at one time using websockets
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Demo
+- unfortunatley theres no demo website so nothing inaproprate will be displayed but you can view the video below showing how it works with 2 tabs (sorry for low quality):
+https://www.youtube.com/watch?v=YGayQprkZBY
+if you dont get whats happening the windows are 2 different website windows opened with the notepad which are automatically being updated, you can have as many clients connected to the server as you want.
 
-## Creating a project
+## Features
+- AutoSave and sync with all clients connected to server
+- Good looking editor 
+- Persistance - when server is turned off text is saved
+- Helpful dynamic notifications
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## How to use:
+1. First configure your server.js file, can be put on any available port and chosen ip, if you want it to be public set host to 0.0.0.0
+2. go to `src/routes/+page.svelte` and configure line 28 to the set server.js ip and port
+3. Build and host sveltkit website, can be done with `npm run build`, i reccomend using a PaaS such as Vercel or self hosting one
+4. Run your server with `node server.js`. For production you can use something like pm2 on your desired host
+5. go to the website and enjoy
